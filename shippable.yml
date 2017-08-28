@@ -5,16 +5,16 @@ services:
   - elasticsearch 
   - memcached 
   - mongodb 
-  - mysql 
-  - neo4j 
-  - postgres 
-  - rabbitmq 
-  - redis  
-  - selenium
-  - sqlite 
-  - couchdb 
-  - rethinkdb 
-  - riak 
+ # - mysql 
+ # - neo4j 
+ # - postgres 
+ # - rabbitmq 
+ # - redis  
+  #- selenium
+  #- sqlite 
+  #- couchdb 
+  #- rethinkdb 
+  #- riak 
   
 build:
   ci:
