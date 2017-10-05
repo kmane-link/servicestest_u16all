@@ -1,10 +1,10 @@
 language: node_js
 
-services:
-  - cassandra 
-  - elasticsearch 
-  - memcached 
-  - mongodb 
+#services:
+ # - cassandra 
+ # - elasticsearch 
+ # - memcached 
+ # - mongodb 
  # - mysql 
  # - neo4j 
  # - postgres 
@@ -19,11 +19,16 @@ services:
 build:
   ci:
     - node --version
+    - sudo apt-get install tree
+    - tree /tmp/ssh
     
   pre_ci_boot:
     image_name: drydock/u16all
     image_tag: master
     pull: true  
     
-    
+integrations:
+  key:
+    - integrationName: my_custom_key
+      type: ssh-key   
 
